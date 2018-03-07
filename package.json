@@ -1,0 +1,30 @@
+{
+	"name": "vueinbrowserloader",
+	"version": "18.3.7",
+	"description": "Loads a .vue file from the given URL and compiles it to a component directly in the browser.",
+	"main": "VueInBrowserLoader.js",
+	"scripts": {
+		"build": "rollup -c --silent",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SeregPie/VueInBrowserLoader.git"
+	},
+	"keywords": [
+		"vue"
+	],
+	"author": "Sergej Sintschilin",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/SeregPie/VueInBrowserLoader/issues"
+	},
+	"homepage": "https://github.com/SeregPie/VueInBrowserLoader#readme",
+	"devDependencies": {
+		"rollup": "^0.56.4",
+		"rollup-plugin-buble": "^0.19.2",
+		"rollup-plugin-node-resolve": "^3.0.3",
+		"rollup-plugin-uglify": "^3.0.0",
+		"x": "github:SeregPie/MyJavaScriptHelpers"
+	}
+}
