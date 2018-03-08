@@ -12,6 +12,26 @@ Loads a `.vue` file from the given URL and compiles it to a component directly i
 
 *no dependencies*
 
+## setup
+
+### npm
+
+```shell
+npm i vueinbrowserloader
+```
+
+### ES module
+
+```javascript
+import VueInBrowserLoader from 'vueinbrowserloader';
+```
+
+### browser
+
+```html
+<script src="https://unpkg.com/vueinbrowserloader"></script>
+```
+
 ## usage
 
 ```javascript
