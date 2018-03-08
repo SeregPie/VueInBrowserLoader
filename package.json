@@ -1,6 +1,6 @@
 {
 	"name": "vueinbrowserloader",
-	"version": "18.3.8",
+	"version": "18.3.9",
 	"description": "Loads a .vue file from the given URL and compiles it to a component directly in the browser.",
 	"main": "VueInBrowserLoader.js",
 	"scripts": {
