@@ -1,3 +1,4 @@
+import Document_createElement from 'x/src/Document/createElement';
 import Lang_localEval from 'x/src/Lang/localEval';
 import Object_hasOwn from 'x/src/Object/hasOwn';
 import Url_join from 'x/src/Url/join';
@@ -37,6 +38,9 @@ let VueInBrowserLoader = function(componentUrl) {
 					if (template) {
 						Object.assign(options, {template});
 					}
+					styles.forEach(style => {
+						document.head.appendChild(Document_createElement('style', style));
+					});
 					return options;
 				})
 		);

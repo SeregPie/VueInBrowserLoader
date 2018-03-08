@@ -78,10 +78,12 @@ Separate files.
 ```html
 <template src="./template.html"></template>
 <script src="./script.js"></script>
+<style src="./style.layout.css"></style>
+<style src="./style.theme.green-forest.css"></style>
 ```
+
 ## todo
 
-- style
 - scoped style
 - preProcessors
 - postProcessors
