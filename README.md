@@ -17,7 +17,7 @@ Loads a `.vue` file from the given URL and compiles it to a component directly i
 ### npm
 
 ```shell
-npm i vueinbrowserloader
+npm install vueinbrowserloader
 ```
 
 ### ES module
