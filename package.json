@@ -1,30 +1,33 @@
 {
-	"name": "vueinbrowserloader",
+	"name": "VueInBrowserLoader",
 	"version": "18.3.9",
 	"description": "Loads a .vue file from the given URL and compiles it to a component directly in the browser.",
+	"keywords": [
+		"async",
+		"browser",
+		"client",
+		"get",
+		"http",
+		"load",
+		"local",
+		"url",
+		"vue"
+	],
+	"license": "MIT",
+	"author": "Sergej Sintschilin <seregpie@gmail.com>",
 	"main": "VueInBrowserLoader.js",
+	"repository": "https://github.com/SeregPie/VueInBrowserLoader.git",
 	"scripts": {
 		"build": "rollup -c",
 		"prepublishOnly": "npm run build"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/SeregPie/VueInBrowserLoader.git"
-	},
-	"keywords": [
-		"vue"
-	],
-	"author": "Sergej Sintschilin",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/SeregPie/VueInBrowserLoader/issues"
-	},
-	"homepage": "https://github.com/SeregPie/VueInBrowserLoader#readme",
 	"devDependencies": {
-		"rollup": "^0.56.4",
-		"rollup-plugin-buble": "^0.19.2",
-		"rollup-plugin-node-resolve": "^3.0.3",
-		"rollup-plugin-uglify": "^3.0.0",
-		"x": "github:SeregPie/MyJavaScriptHelpers"
+		"@seregpie/rollup-plugin-resolve": "^18.6.13",
+		"rollup": "^0.66.0",
+		"rollup-plugin-babel-minify": "^6.0.0",
+		"rollup-plugin-buble": "^0.19.2"
+	},
+	"peerDependencies": {
+		"vue": "^2.5.17"
 	}
 }

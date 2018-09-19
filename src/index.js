@@ -1,14 +1,14 @@
-import Document_createElement from 'x/src/Document/createElement';
-import Lang_localEval from 'x/src/Lang/localEval';
-import Object_hasOwn from 'x/src/Object/hasOwn';
-import Url_join from 'x/src/Url/join';
-import Url_normalize from 'x/src/Url/normalize';
-import Url_toAbsolute from 'x/src/Url/toAbsolute';
+import Document_createElement from '/utils/Document/createElement';
+import Lang_localEval from '/utils/Lang/localEval';
+import Object_hasOwn from '/utils/Object/hasOwn';
+import Url_join from '/utils/Url/join';
+import Url_normalize from '/utils/Url/normalize';
+import Url_toAbsolute from '/utils/Url/toAbsolute';
 
-import normalizeComponentUrl from './normalizeComponentUrl';
 import loadComponentContents from './loadComponentContents';
+import normalizeComponentUrl from './normalizeComponentUrl';
 
-const cachedComponents = {};
+let cachedComponents = {};
 
 let VueInBrowserLoader = function(componentUrl) {
 	componentUrl = normalizeComponentUrl(componentUrl);
@@ -16,7 +16,7 @@ let VueInBrowserLoader = function(componentUrl) {
 		return (
 			Object_hasOwn(cachedComponents, componentUrl)
 				? cachedComponents[componentUrl]
-				: cachedComponents[componentUrl] = loadComponentContents(componentUrl).then(([template, script, styles, scopedStyles]) => {
+				: cachedComponents[componentUrl] = loadComponentContents(componentUrl).then(([template, script, styles, /*scopedStyles*/]) => {
 					let options = {};
 					if (script) {
 						let exports = {};

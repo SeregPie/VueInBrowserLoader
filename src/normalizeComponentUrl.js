@@ -1,7 +1,7 @@
-import Url_join from 'x/src/Url/join';
-import Url_normalize from 'x/src/Url/normalize';
+import Url_join from '/utils/Url/join';
+import Url_normalize from '/utils/Url/normalize';
 
-const extension = '.vue';
+let extension = '.vue';
 
 export default function(url) {
 	return Url_normalize(

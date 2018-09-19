@@ -1,5 +1,5 @@
-import Document_createElement from 'x/src/Document/createElement';
-import Http_get from 'x/src/Http/get';
+import Document_createElement from '/utils/Document/createElement';
+import Http_get from '/utils/Http/get';
 
 import loadElementContent from './loadElementContent';
 

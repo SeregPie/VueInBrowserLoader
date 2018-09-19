@@ -1,5 +1,5 @@
-import Http_get from 'x/src/Http/get';
-import Url_toAbsolute from 'x/src/Url/toAbsolute';
+import Http_get from '/utils/Http/get';
+import Url_toAbsolute from '/utils/Url/toAbsolute';
 
 export default function(el, url) {
 	return (
