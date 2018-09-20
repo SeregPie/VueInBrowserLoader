@@ -6,7 +6,7 @@ Inspired by Franck Freiburger's [http-vue-loader](https://github.com/FranckFreib
 
 `VueInBrowserLoader(url)`
 
-Loads a .`.vue` file from the given URL and compiles it to a component directly in the browser. Already loaded components are cached.
+Loads a `.vue` file from the given URL and compiles it to a component directly in the browser. Already loaded components are cached.
 
 ## dependencies
 
