@@ -6,11 +6,11 @@ Inspired by Franck Freiburger's [http-vue-loader](https://github.com/FranckFreib
 
 `VueInBrowserLoader(url)`
 
-Loads a `.vue` file from the given URL and compiles it to a component directly in the browser. Already loaded components are cached.
+Loads a .`.vue` file from the given URL and compiles it to a component directly in the browser. Already loaded components are cached.
 
 ## dependencies
 
-*no dependencies*
+- [Vue](https://github.com/vuejs/vue)
 
 ## setup
 
@@ -36,13 +36,13 @@ import VueInBrowserLoader from 'vueinbrowserloader';
 
 ```javascript
 new Vue({
-  /*...*/
   components: {
-    'my-tiny-component': VueInBrowserLoader('/vue-components/my-tiny-component.vue'),
+    'MyButton': VueInBrowserLoader('/app/components/Button.vue'),
 
-    'my-component': VueInBrowserLoader('/vue-components/my-component'),
-     // resolves to '/vue-components/my-component/index.vue'
+    'MyDialog': VueInBrowserLoader('/app/components/Dialog'),
+     // resolves to '/app/components/Dialog/index.vue'
   },
+  /*...*/
 });
 ```
 
@@ -51,21 +51,19 @@ new Vue({
 Use relative URLs.
 
 ```html
-<!-- /vue-components/my-component/index.vue -->
-<template>
-  <p><!--...--></p>
-</template>
+<!-- /app/components/Dialog/index.vue -->
+<template><!--...--></template>
 <script>
 
 module.exports = {
-  /*...*/
   components: {
-    'my-nested-component': VueInBrowserLoader('./my-nested-component'),
-    // resolves to '/vue-components/my-component/my-nested-component/index.vue'
+    'MyTitleBar': VueInBrowserLoader('./TitleBar.vue'),
+    // resolves to '/app/components/Dialog/TitleBar.vue'
 
-    'my-general-component': VueInBrowserLoader('../my-general-component'),
-    // resolves to '/vue-components/my-general-component/index.vue'
+    'MyButton': VueInBrowserLoader('../Button.vue'),
+    // resolves to '/app/components/Button.vue'
   },
+  /*...*/
 });
 
 </script>
@@ -79,11 +77,11 @@ Separate files.
 <template src="./template.html"></template>
 <script src="./script.js"></script>
 <style src="./style.layout.css"></style>
-<style src="./style.theme.green-forest.css"></style>
+<style src="./style.theme.GreenForest.css"></style>
 ```
 
 ## todo
 
 - scoped style
-- preProcessors
-- postProcessors
+- pre-processors
+- post-processors
